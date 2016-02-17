@@ -43,6 +43,6 @@ factory = Factory()
 factory.clients = []
 factory.protocol = IphoneChat
 
-reactor.listenTCP(80, factory)
+reactor.listenTCP(4, factory)
 print "Iphone Chat server started"
 reactor.run()
