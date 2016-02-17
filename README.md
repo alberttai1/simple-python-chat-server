@@ -11,6 +11,8 @@ Currently it is installed on the server alrady.
 `supervisorctl start chat_server`
 ### Stopping Service
 `supervisorctl stop chat_server`
+### Updating Supervisor 
+`supervisorctl update`
 ### Location
 `/var/www/cgi-bin/hyper-care-msg-backend/server.py`
 ##Github
