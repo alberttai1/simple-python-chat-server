@@ -5,11 +5,13 @@ class IphoneChat(Protocol):
 
     # Deals when a client is connected
     def connectionMade(self):
+        # Add the client to a new list of clients
         self.factory.clients.append(self)
-        print "clients are ", self.factory.clients
+        print "Clients are ", self.factory.clients
 
     # Deals when a client disconnects
     def connectionLost(self, reason):
+        # When a client leaves, remove him
         self.factory.clients.remove(self)
 
     # Deals with data sent
