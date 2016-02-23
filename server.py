@@ -22,6 +22,7 @@ class IphoneChat(Protocol):
             command = a[0]
             content = a[1]
 
+
             msg = ""
             if command == "iam":
                 self.name = content
@@ -32,7 +33,8 @@ class IphoneChat(Protocol):
                 print msg
 
             for clients in self.factory.clients:
-                clients.message(msg)
+                if clients!=self :
+                    clients.message(msg)
 
     # Deals with Messages
     def message(self, message):
