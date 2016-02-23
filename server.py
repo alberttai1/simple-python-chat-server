@@ -38,7 +38,8 @@ class IphoneChat(Protocol):
 
     # Deals with Messages
     def message(self, message):
-        self.transport.write(message + '\n')
+            self.transport.write(message)
+        # self.transport.write(message + '\n')
 
 # Handles Incoming Connections
 factory = Factory()
