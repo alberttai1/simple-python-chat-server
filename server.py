@@ -25,7 +25,8 @@ class IphoneChat(Protocol):
 
             msg = ""
             if command == "iam":
-                self.name = content
+                # below is to parse it to remove new lines on the name 
+                self.name = content.replace('\n', ' ').replace('\r', '')
                 msg = self.name + " has joined"
 
             elif command == "msg":
@@ -38,8 +39,7 @@ class IphoneChat(Protocol):
 
     # Deals with Messages
     def message(self, message):
-            self.transport.write(message)
-        # self.transport.write(message + '\n')
+        self.transport.write(message + '\n')
 
 # Handles Incoming Connections
 factory = Factory()
