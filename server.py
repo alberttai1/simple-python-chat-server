@@ -25,7 +25,7 @@ class IphoneChat(Protocol):
 
             msg = ""
             if command == "iam":
-                # below is to parse it to remove new lines on the name 
+                # below is to parse it to remove new lines on the name
                 self.name = content.replace('\n', ' ').replace('\r', '')
                 msg = self.name + " has joined"
 
