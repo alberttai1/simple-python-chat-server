@@ -1,4 +1,4 @@
-# hyper-care-msg-backend
+# A Simple Python Chat Server 
 
 ## Installation on Server
 ### Running it
@@ -13,12 +13,6 @@ Currently it is installed on the server alrady.
 `supervisorctl stop chat_server`
 ### Updating Supervisor 
 `supervisorctl update`
-### Location
-`/var/www/cgi-bin/hyper-care-msg-backend/server.py`
-##Github
-Git hub has been automatically setup on the server with my account. 
-If you go to the folder
-`/var/www/cgi-bin/hyper-care/msg-backend/`
-you will be able to do all the git functions.
+
 
 
